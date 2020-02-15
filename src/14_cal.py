@@ -34,16 +34,23 @@ from datetime import datetime
 num_args = len(sys.argv)
 month = datetime.today().strftime('%m')
 year = datetime.today().strftime('%Y')
+c = calendar.TextCalendar()
 
 if num_args == 3:
     month = sys.argv[1]
     year = sys.argv[2]
     print(month, year)
+    cal = c.formatmonth(int(year), int(month))
+    print(cal)
 elif num_args == 2:
     month = sys.argv[1]
     print(month, year)
+    cal = c.formatmonth(int(year), int(month))
+    print(cal)
 elif num_args == 1:
     print(month, year)
+    cal = c.formatmonth(int(year), int(month))
+    print(cal)
 elif num_args > 3:
     print('Please enter the current date in Month, Year format')
     exit
