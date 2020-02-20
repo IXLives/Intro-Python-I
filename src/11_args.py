@@ -86,7 +86,4 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d={
-    "monster": "goblin",
-    "hp": 3
-})
+f4(monster=d['monster'], hp=d['hp'])
